@@ -1,0 +1,47 @@
+GIT COMMANDS
+=================================
+
+git clone "urllink.git"
+git status
+git add
+
+ONCE IN REPOSITORY
+1) git pull
+2) git commit -m "message"
+3) git push
+
+=========================================
+Another process running thread ... (error)
+rm -f .git/index.lock
+
+=======================================
+DELETE FILE FROM GIT REPOSITORY
+git rm file1.txt
+git commit -m "remove file1.txt"
+
+DELETE MULTIPLE FILES 
+git rm file1.txt file2.txt file3.txt
+
+====================================
+
+UNTRACK FILES ALREADY ADDED TO GIT REPOSITORY BASED ON .GITIGNORE
+
+STEP1: COMMIT ALL YOUR CHANGES
+STEP2: REMOVE EVERYTHING FROM THE REPOSITORY
+CLEAR REPO
+git rm -r --cached .
+
+-r recursive removal
+--cached will only remove files from index. Files will still be there!
+ . indicates all files will be untracked
+
+UNTRACK SPECIFIC FILE
+git rm --cached foo.txt
+
+STEP3: RE ADD EVERYTHING
+git add .
+
+STEP4: COMMIT
+git commit -m ".gitignore fix"
+
+=========================================
